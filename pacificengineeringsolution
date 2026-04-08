@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacific Engineering Solution | Vanuatu</title>
+
+<style>
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+h1, h2 { letter-spacing: 0.5px; }
+
+header {
+  background: linear-gradient(135deg, #000 0%, #0b3d2e 60%, #7a0f1e 100%);
+}
+.header-top { padding: 30px 20px; text-align: center; }
+.header-top h1 { margin: 0; color: white; }
+
+.gold-bar { height: 18px; background: #8a7424; }
+
+nav { background: #0f172a; }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav a { color: white; text-decoration: none; font-weight: bold; }
+nav a:hover { color: #38bdf8; }
+
+.hero {
+  background: #1e3a8a;
+  color: white;
+  padding: 110px 20px;
+  text-align: center;
+}
+.hero h2 { font-size: 42px; }
+.hero p { color: #e6f6ff; font-size: 18px; }
+.btn {
+  background: #38bdf8;
+  color: black;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.section.reverse { flex-direction: row-reverse; }
+.section img {
+  width: 300px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+.card {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+}
+
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 26px;
+  padding: 14px 18px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,.3);
+  z-index: 2000;
+}
+
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; }
+  .hero { padding: 80px 20px; }
+  .hero h2 { font-size: 32px; }
+  .section { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-top">
+    <h1>Pacific Engineering Solution in Vanuatu</h1>
+  </div>
+  <div class="gold-bar"></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#mechanical">Mechanical</a></li>
+      <li><a href="#automotive">Automotive</a></li>
+      <li><a href="#civil">Civil Steel</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a onclick="openModal()">Request a Quote</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h2>Engineering Pride for the Pacific in Vanuatu</h2>
+  <p>Reliable engineering, steel and technology services</p>
+  <button class="btn" onclick="openModal()">Request a Quote</button>
+</section>
+
+<section class="section" id="mechanical">
+  <div>
+    <h2>Mechanical Fabrication</h2>
+    <div class="service-list">
+      <div class="card">Security grills & gates</div>
+      <div class="card">Tank stands</div>
+      <div class="card">Drying racks</div>
+      <div class="card">Custom welding</div>
+    </div>
+  </div>
+  <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=60" alt="Mechanical work">
+</section>
+
+<section class="section reverse" id="automotive">
+  <div>
+    <h2>Automotive Services</h2>
+    <div class="service-list">
+      <div class="card">Oil servicing</div>
+      <div class="card">Brake repairs</div>
+      <div class="card">Suspension repairs</div>
+      <div class="card">Battery replacement</div>
+    </div>
+  </div>
+  <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=60" alt="Automotive service">
+</section>
+
+<section class="section" id="civil">
+  <div>
+    <h2>Civil Steel Products</h2>
+    <div class="service-list">
+      <div class="card">Handrails</div>
+      <div class="card">Stair rails</div>
+      <div class="card">Fencing panels</div>
+      <div class="card">Drain covers</div>
+    </div>
+  </div>
+  <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=60" alt="Civil steel">
+</section>
+
+<section class="section">
+  <div>
+    <h2>Our Location</h2>
+    <p>Port Vila, Efate – Serving all of Vanuatu</p>
+  </div>
+  <iframe
+    src="https://www.google.com/maps?q=Port+Vila+Vanuatu&output=embed"
+    width="300"
+    height="220"
+    style="border:0;border-radius:18px;"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>Pacific Engineering Solution – Vanuatu</strong></p>
+  <p>📧 engineeringsolutionpacific@gmail.com | 📞 +678 7777003</p>
+  <p>© 2026 All rights reserved</p>
+</footer>
+
+<a class="whatsapp-btn" href="https://wa.me/6787777003" target="_blank">💬</a>
+
+<script>
+function openModal() {
+  alert("Quote form coming soon. Please contact us via WhatsApp.");
+}
+</script>
+
+</body>
+</htm
